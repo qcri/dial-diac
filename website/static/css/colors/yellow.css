@@ -1,0 +1,26 @@
+/*------------------------------------------------------------------
+
+COLOR:	YELLOW	#ff9c00
+
+-------------------------------------------------------------------*/
+.portfolio-in:before, .btn-dark:hover, .filter-style-2 .cbp-filter-item.cbp-filter-item-active, .cbp-l-filters-buttonCenter .cbp-filter-counter, .filter-style-2 .cbp-filter-item:hover, .testimonial .owl-controls .owl-dots div.active, .no-touch .cd-top:hover, .filter-style-3 .cbp-filter-item.cbp-filter-item-active:before, .filter-style-3 .cbp-filter-item:hover:before, .filter-style-4 .cbp-filter-item.cbp-filter-item-active:before, .filter-style-4 .cbp-filter-item:hover:before, .filter-style-5 .cbp-filter-item.cbp-filter-item-active, .filter-style-5 .cbp-filter-item:hover {
+	background: #ff9c00 !important;
+}
+a:hover, a:focus {
+	color: #ff9c00;
+}
+.post-content .tag, .portfolio  {
+	color: #ff9c00 !important;
+}
+.portfolio .port-hover span {
+	color: #fff !important;
+}
+.btn-dark:hover, .testimonial .owl-controls .owl-dots div.active, .cd-top, a.big-border:hover {
+	border-color: #ff9c00;
+}
+.our-team .team-hover {
+	background: rgba(0,0,0,0.8);
+}
+.cbp-l-filters-buttonCenter .cbp-filter-counter:before {
+	border-top-color: #ff9c00;
+}

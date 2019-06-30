@@ -1,0 +1,9 @@
+model_dir: diacritizer_tn
+
+data:
+  train_features_file: diacritizer_tn/data/toy-ende/src-train.txt
+  train_labels_file: diacritizer_tn/data/toy-ende/tgt-train.txt
+  eval_features_file: diacritizer_tn/data/toy-ende/src-val.txt
+  eval_labels_file: diacritizer_tn/data/toy-ende/tgt-val.txt
+  source_words_vocabulary: diacritizer_tn/data/toy-ende/src-vocab.txt
+  target_words_vocabulary: diacritizer_tn/data/toy-ende/tgt-vocab.txt

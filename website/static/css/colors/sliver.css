@@ -1,0 +1,27 @@
+/*------------------------------------------------------------------
+
+COLOR:	sliver		#BDC3C7
+
+-------------------------------------------------------------------*/
+.portfolio-in:before, .btn-dark:hover, .filter-style-2 .cbp-filter-item.cbp-filter-item-active, .cbp-l-filters-buttonCenter .cbp-filter-counter, .filter-style-2 .cbp-filter-item:hover, .testimonial .owl-controls .owl-dots div.active, .no-touch .cd-top:hover, .filter-style-3 .cbp-filter-item.cbp-filter-item-active:before, .filter-style-3 .cbp-filter-item:hover:before, .filter-style-4 .cbp-filter-item.cbp-filter-item-active:before, .filter-style-4 .cbp-filter-item:hover:before, .filter-style-5 .cbp-filter-item.cbp-filter-item-active, .filter-style-5 .cbp-filter-item:hover {
+	background: #BDC3C7 !important;
+}
+a:hover, a:focus {
+	color: #BDC3C7;
+}
+.post-content .tag, .portfolio .port-hover span, .portfolio a.cbp-lightbox, .portfolio .cbp-item h6 a:hover, .portfolio .cbp-item a.link, .testimonial #testi-slide span, .cd-top, .our-team .team-names p, .paging li a:hover, .coming-soon h1, .filter-style-1 .cbp-filter-item:hover, .filter-style-1 .cbp-filter-item.cbp-filter-item-active, .filter-style-3 .cbp-filter-item.cbp-filter-item-active, .filter-style-3 .cbp-filter-item:hover, .portfolio-details .project-info li a, .filter-style-4 .cbp-filter-item.cbp-filter-item-active {
+	color: #BDC3C7 !important;
+}
+.portfolio .port-hover span {
+	color: #fff !important;
+}
+.btn-dark:hover, .testimonial .owl-controls .owl-dots div.active, .cd-top, a.big-border:hover {
+	border-color: #BDC3C7;
+}
+.our-team .team-hover {
+	background: rgba(0,0,0,0.8);
+}
+.cbp-l-filters-buttonCenter .cbp-filter-counter:before {
+	border-top-color: #BDC3C7;
+}
+

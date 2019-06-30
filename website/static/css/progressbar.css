@@ -1,0 +1,20 @@
+/*body {*/
+  /*padding: 50px;*/
+/*}*/
+.labels {
+
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  span {
+    color: #666;
+  }
+}
+
+
+.progress {
+  height: 5px;
+}
+.progress-bar {
+background: -webkit-linear-gradient(left, #337ab7 0%, skyblue 100%); /* Chrome10-25,Safari5.1-6 */
+}

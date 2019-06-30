@@ -1,0 +1,21 @@
+a.disooqi  {
+    color: #346abb;
+    text-decoration: none;
+}
+
+a.disooqi:hover  {
+    /*background-color: #f0f0f0;*/
+    /*color: olive;*/
+    text-decoration: underline !important;
+    /*padding: 5px;*/
+}
+
+p.disooqi {
+    /*font-size: 16px !important;*/
+}
+
+ul.disooqi li{
+    line-height: 22px;
+    /*font-size: 16px;*/
+
+}

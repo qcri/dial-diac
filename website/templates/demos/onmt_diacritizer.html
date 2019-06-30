@@ -1,0 +1,283 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8352292-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-8352292-2');
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="author" content="M_Adnan"/>
+    <!-- Document Title -->
+    <title>Seq2seq Diacritization</title>
+
+    <!-- StyleSheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/ionicons.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+
+    <!-- FontsOnline -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <!-- JavaScripts -->
+    <script src="{{ url_for('static', filename='js/vendors/modernizr.js') }}"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<!-- Page Wrapper -->
+<div id="wrap">
+
+    <!-- Header -->
+    <header></header>
+    <!-- End Header -->
+
+    <!-- Content -->
+    <div id="content" class="resune-edit">
+        <div class="resume" style="background: white !important;">
+            <div class="container">
+
+                <!-- TOP HEAD -->
+                <div class="top-head">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h4>Arabic Diacritization using Sequence to Sequence Modeling </h4>
+                            <!--<a href="#.">Edit Resume</a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resume -->
+                <div class="row">
+
+                    <!-- Sidebar -->
+                    <!--<div class="col-md-4">-->
+                    <!--<div class="side-bar">-->
+
+                    <!--&lt;!&ndash; Professional Details &ndash;&gt;-->
+                    <!--<h5 class="tittle">Professional Details</h5>-->
+                    <!--<label class="btn-file"> <i class="fa fa-camera"></i> Click to add diploma-->
+                    <!--<input type="file" style="display: none;">-->
+                    <!--</label>-->
+                    <!--<form>-->
+                    <!--<ul class="personal-info">-->
+                    <!--<li>-->
+                    <!--<p> <span>-->
+                    <!--<input class="form-control" type="text" placeholder="Title">-->
+                    <!--</span>-->
+                    <!--<input class="form-control" type="text" placeholder="Title">-->
+                    <!--</p>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                    <!--<p> <span>-->
+                    <!--<input class="form-control" type="text" placeholder="Title">-->
+                    <!--</span>-->
+                    <!--<input class="form-control" type="text" placeholder="Title">-->
+                    <!--</p>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                    <!--<p> <span>-->
+                    <!--<input class="form-control" type="text" placeholder="Title">-->
+                    <!--</span>-->
+                    <!--<input class="form-control" type="text" placeholder="Title">-->
+                    <!--</p>-->
+                    <!--</li>-->
+                    <!--<li> <a href="#" class="btn"><i class="fa fa-plus"></i> ADD INFO</a> </li>-->
+                    <!--</ul>-->
+                    <!--</form>-->
+
+                    <!--&lt;!&ndash; Attachments &ndash;&gt;-->
+                    <!--<h5 class="tittle">Attachments</h5>-->
+                    <!--<div class="attach bor-btm padding-25">-->
+                    <!--<ul>-->
+                    <!--<li>-->
+                    <!--<p><img src="{{ url_for('static', filename='images/pdf-icon.jpg') }}" alt="" > Curriculum-Vitae.pdf <a href="#."><i class="fa fa-cloud-download"></i></a> <a href="#."><i class="fa fa-eye"></i></a></p>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                    <!--<p><img src="{{ url_for('static', filename='images/word-icon.jpg') }}" alt="" > COE.docx <a href="#."><i class="fa fa-cloud-download"></i></a> <a href="#."><i class="fa fa-eye"></i></a></p>-->
+                    <!--</li>-->
+                    <!--</ul>-->
+                    <!--<p> <span>-->
+                    <!--<input class="form-control" type="text" placeholder="Title">-->
+                    <!--</span> </p>-->
+                    <!--<a href="#" class="btn"><i class="fa fa-plus"></i> Add Attachment</a> </div>-->
+
+                    <!--&lt;!&ndash; Social Profiles &ndash;&gt;-->
+                    <!--<h5 class="tittle">Social Profiles</h5>-->
+                    <!--<div class="social-icon bor-btm padding-25">-->
+                    <!--<ul>-->
+                    <!--<li> <i class="fa fa-facebook"></i>-->
+                    <!--<input class="form-control" type="text" placeholder="facebook.com/billgates">-->
+                    <!--</li>-->
+                    <!--<li> <i class="fa fa-twitter"></i>-->
+                    <!--<input class="form-control" type="text" placeholder="twitter.com/billgates">-->
+                    <!--</li>-->
+                    <!--<li> <i class="fa fa-google-plus"></i>-->
+                    <!--<input class="form-control" type="text" placeholder="google.com/billgates">-->
+                    <!--</li>-->
+                    <!--<li> <i class="fa fa-linkedin"></i>-->
+                    <!--<input class="form-control" type="text" placeholder="linkedin.com/billgates">-->
+                    <!--</li>-->
+                    <!--<li> <i class="fa fa-dribbble"></i>-->
+                    <!--<input class="form-control" type="text" placeholder="dribbble.com/billgates">-->
+                    <!--</li>-->
+                    <!--<li> <i class="fa fa-behance"></i>-->
+                    <!--<input class="form-control" type="text" placeholder="behance.com/billgates">-->
+                    <!--</li>-->
+                    <!--<li> <i class="fa fa-stumbleupon"></i>-->
+                    <!--<input class="form-control" type="text" placeholder="stumbleupon.com/billgates">-->
+                    <!--</li>-->
+                    <!--</ul>-->
+                    <!--</div>-->
+
+                    <!--&lt;!&ndash; Contact Me &ndash;&gt;-->
+                    <!--<h5 class="tittle">Contact Me</h5>-->
+                    <!--<div class="contact padding-25">-->
+                    <!--&lt;!&ndash; Success Msg &ndash;&gt;-->
+                    <!--<div id="contact_message" class="success-msg"> <i class="fa fa-paper-plane-o"></i>Thank You. Your Message has been Submitted</div>-->
+
+                    <!--&lt;!&ndash; FORM &ndash;&gt;-->
+                    <!--<form role="form" id="contact_form" class="contact-form" method="post" onSubmit="return false">-->
+                    <!--<ul class="row">-->
+                    <!--<li class="col-sm-12">-->
+                    <!--<label>-->
+                    <!--<input type="text" class="form-control" name="email" id="email" placeholder="Email">-->
+                    <!--</label>-->
+                    <!--</li>-->
+                    <!--<li class="col-sm-12">-->
+                    <!--<label>-->
+                    <!--<input type="text" class="form-control" name="company" id="company" placeholder="Subject">-->
+                    <!--</label>-->
+                    <!--</li>-->
+                    <!--<li class="col-sm-12">-->
+                    <!--<label>-->
+                    <!--<textarea class="form-control" name="message" id="message" rows="5" placeholder="Message"></textarea>-->
+                    <!--</label>-->
+                    <!--</li>-->
+                    <!--<li class="col-sm-12">-->
+                    <!--<button type="submit"  value="submit" id="btn_submit" onClick="proceed();">Send Message</button>-->
+                    <!--</li>-->
+                    <!--</ul>-->
+                    <!--</form>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</div>-->
+
+                    <!-- MAIN CONTENT -->
+                    <div class="col-md-12">
+                        <div class="inside-sec">
+                            <!-- BIO AND SKILLS -->
+                            <!--<h5 class="tittle">Diacritization</h5>-->
+                            <form method="POST" action="">
+                                {{ form.hidden_tag() }}
+                                <div class="bio-info padding-30">
+                                    <div class="form-group">
+                                        <!--{{ form.content.label(class="form-control-label") }}-->
+                                        {% if form.content.errors %}
+                                        {{ form.content(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.content.errors %}
+                                            <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                        {% else %}
+                                        {{ form.content(class="form-control form-control-lg", dir="rtl",
+                                        style="color: black; font-size: 20px;height: 230px;") }}
+                                        {% endif %}
+                                    </div>
+                                    <!--<textarea dir="rtl" class="form-control"-->
+                                              <!--style="color: black; font-size: 20px;height: 230px;">نلتزم في معهد قطر لبحوث الحوسبة بتعزيز مكانة اللغة العربية في عصر المعلومات عبر إجراء أبحاث في تقنيات اللغة العربية، فالحرص على ازدهار اللغة العربية في العالم الرقمي هو من أولويات أبحاثنا، وتتعرض مشاريع بحثنا الحالية لتحديات مرتبطة بانعدام المحتوى وأخرى لا تقل أهمية حول استخراج هذا المحتوى.-->
+
+<!--يسعى معهد قطر لبحوث الحوسبة ليصبح الرائد في تقنيات اللغة العربية في المنطقة والعالم وذلك في مجالات البحث واسترجاع المعلومات والتحليل ومعالجة اللغات المتعددة والترجمة الآلية المتقدمة كما يبذل جهداً لزيادة المحتوى العربي على الإنترنت وإغنائه.</textarea>-->
+                                    <div class="skills margin-top-50">
+
+                                        <!-- SKILLS -->
+                                        <h6>{{ form.dialect.label() }}</h6>
+
+                                         <!-- Sound Engineering -->
+                                        <div class="row">
+
+                                            <!-- Categories -->
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    {% if form.dialect.errors %}
+                                                    {{ form.content(class="form-control selectpicker is-invalid") }}
+                                                    <div class="invalid-feedback">
+                                                        {% for error in form.dialect.errors %}
+                                                        <span>{{ error }}</span>
+                                                        {% endfor %}
+                                                    </div>
+                                                    {% else %}
+                                                    {{ form.dialect(class="form-control selectpicker") }}
+                                                    {% endif %}
+                                                </div>
+                                                <!--<span class="add-custm">or <a href="#."> Add A Custom Category</a></span> -->
+                                            </div>
+
+
+                                            <!--  Skills -->
+                                            <div class="col-sm-6" style="text-align: right;">
+                                                {{ form.submit(class="btn ") }}
+                                                <!--<i href="#" class="btn" type="submit"><i class="fa fa-refresh"></i> Restore Diacritics</i>-->
+                                            </div>
+                                            <!--<select class="selectpicker">-->
+                                            <!--<option>Skills</option>-->
+                                            <!--<option>HTML5 CSS3</option>-->
+                                            <!--<option>Photoshop</option>-->
+                                            <!--</select>-->
+                                            <!--<span class="add-custm">or <a href="#."> Add A Custom Skills</a></span> -->
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </form>
+                            <div class="bio-info padding-30">
+                                            <div class="form-group">
+                                                <textarea id='output' dir="rtl" class="form-control" style="color: black; font-size: 20px;height: 230px;">{% if output %}{{ output }} {% endif %}</textarea>
+
+                                            </div>
+                                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Content -->
+
+    <!-- Footer -->
+    <!--<footer class="footer">-->
+        <!--<div class="rights">-->
+            <!--<p>© Copyright 2019 QCRI. All right reserved.</p>-->
+        <!--</div>-->
+    <!--</footer>-->
+    <!-- End Footer -->
+
+</div>
+<!-- End Page Wrapper -->
+
+<!-- JavaScripts -->
+<script src="{{ url_for('static', filename='js/vendors/jquery/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/vendors/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/vendors/owl.carousel.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

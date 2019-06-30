@@ -1,0 +1,28 @@
+.urgentBar {
+    display: none;
+    padding: 10px 16px 10px;
+    background: #de384e;
+    color: #fff;
+    font-family: Al-Jazeera-Arabic-Regular;
+    position: relative;
+    font-size: 18px;
+    margin-top: 41px;
+    min-height: 60px;
+}
+
+.urgentBar__txt {
+    display: inline-block;
+    width: 88%;
+}
+
+.urgentBar__close {
+    position: absolute;
+    top: 16px;
+    /*left: 16px;*/
+    width: 24px;
+    height: 24px;
+    font-size: 19px;
+    transition: 1s ease-out;
+    -webkit-transition: 1s ease-out;
+    transform: rotate(360deg);
+}

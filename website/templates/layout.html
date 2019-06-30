@@ -1,0 +1,349 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8352292-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-8352292-2');
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="author" content="Mohamed Eldesouki (@disooqi)"/>
+    <meta name="description" content="Personal Website of Mohamed Eldesouki (@disooqi), Curriculum Vitae, Publications,
+    Research Projects, Blog, Experience, Education, Portfolio ...">
+    <meta name="keywords" content="disooqi, Mohamed Eldesouki, Farasa, QMDIS, Dialectid, ArabAgent, QCRI,
+    Qatar Computing Research Institute, ALT, mohamohamed, Arabic NLP, Natural Language Processing, HBKU">
+    <!--<link rel="icon" type="image/png" href="https://polybit-apps.s3.amazonaws.com/stdlib/users/disooqi/profile/image.png?1555844413267">-->
+
+    <meta property="og:url" content="{{ request.url }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Personal Website of Mohamed Eldesouki (@disooqi), Curriculum Vitae, Publications, Research Projects, Blog, Experience, Education, Portfolio ..." />
+    <meta property="og:image" content="https://mohamed-eldesouki.com/static/images/me-02.JPG" />
+    <meta property="fb:app_id" content="332122394106516"/>
+
+
+    <!-- Document Title -->
+    {% if title %}
+    <meta property="og:title" content="{{ title }} | Mohamed Eldesouki" />
+    <title> {{ title }} | Mohamed Eldesouki</title>
+
+    {% else %}
+    <meta property="og:title" content="Mohamed Eldesouki" />
+    <title>Mohamed Eldesouki</title>
+    {% endif %}
+
+    <!-- StyleSheets -->
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ url_for('static', filename='images/ico/apple-icon-57x57.png') }}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ url_for('static', filename='images/ico/apple-icon-60x60.png') }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ url_for('static', filename='images/ico/apple-icon-72x72.png') }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ url_for('static', filename='images/ico/apple-icon-76x76.png') }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ url_for('static', filename='images/ico/apple-icon-114x114.png') }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ url_for('static', filename='images/ico/apple-icon-120x120.png') }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ url_for('static', filename='images/ico/apple-icon-144x144.png') }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ url_for('static', filename='images/ico/apple-icon-152x152.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/ico/apple-icon-180x180.png') }}">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{{ url_for('static', filename='images/ico/android-icon-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/ico/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ url_for('static', filename='images/ico/favicon-96x96.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/ico/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='images/ico/manifest.json') }}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{{ url_for('static', filename='images/ico/ms-icon-144x144.png') }}">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/ionicons.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/urgent.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/progressbar.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/disooqi.css') }}"/>
+
+    <!-- FontsOnline -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <!-- JavaScripts -->
+    <script src="{{ url_for('static', filename='js/vendors/modernizr.js') }}"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<!-- Page Wrapper -->
+<div id="wrap">
+
+    <!-- Header -->
+    <nav id="cd-lateral-nav">
+        <h5 class="tittle">Extended MENU</h5>
+        <ul class="cd-navigation">
+            <!--<li><a href="index-main.html">Index Main</a></li>-->
+            <!--<li><a href="index-1.html">Index 2</a></li>-->
+            <!--<li><a href="index.html">Index 3</a></li>-->
+            <!--<li><a href="index-3-pages.html">Index Links</a></li>-->
+            <!--<li><a href="about-me.html">About Me</a></li>-->
+            <li><a href="{{ url_for('portfolio') }}">Portfolio</a></li>
+            <li><a href="#">Teaching</a></li>
+
+            <li><a href="#">Blog</a></li>
+            <li class="item-has-children"><a href="index-main.html">Research Projects</a>
+                <ul class="sub-menu">
+                    <li><a href="{{ url_for('project_farasa') }}">Farasa Project</a></li>
+                    <li><a href="{{ url_for('project_dialectid') }}">QMDIS Project</a></li>
+                    <li><a href="{{ url_for('project_buzzdiggr') }}">Buzzdiggr Project</a></li>
+                    <li><a href="{{ url_for('project_arabagent') }}">ArabAgent Project</a></li>
+                </ul>
+            </li>
+        </ul>
+        <!--<h5 class="tittle">Latest Post</h5>-->
+        <!--<ul class="latest-post">-->
+        <!---->
+        <!--&lt;!&ndash; Post Small &ndash;&gt;-->
+        <!--<li>-->
+        <!--<div class="media">-->
+        <!--<div class="media-left"> <a href="#."><img src="images/small-img.jpg" alt=""></a></div>-->
+        <!--<div class="media-body"> <a href="#.">Hello Itaewon -->
+        <!--Project</a>-->
+        <!--<p class="font-crimson font-italic">Webdesign</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</li>-->
+        <!--&lt;!&ndash; Post Small &ndash;&gt;-->
+        <!--<li>-->
+        <!--<div class="media">-->
+        <!--<div class="media-left"> <a href="#."><img src="images/small-img-1.jpg" alt=""></a></div>-->
+        <!--<div class="media-body"> <a href="#.">Casual in grey</a>-->
+        <!--<p class="font-crimson font-italic">Webdesign</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</li>-->
+        <!--&lt;!&ndash; Post Small &ndash;&gt;-->
+        <!--<li>-->
+        <!--<div class="media">-->
+        <!--<div class="media-left"> <a href="#."><img src="images/small-img-2.jpg" alt=""></a></div>-->
+        <!--<div class="media-body"> <a href="#.">Transittions</a>-->
+        <!--<p class="font-crimson font-italic">Webdesign</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</li>-->
+        </ul>
+    </nav>
+    <!-- End Header -->
+
+    <!-- Content -->
+    <main class="cd-main-content">
+        <div id="content">
+            <div class="resume">
+                <div class="container">
+
+                    <!-- NAV LINKS -->
+                    {% block NAV_LINKS %}
+                    <!--  {# <li {% if request.url_rule.endpoint == "myblueprint.client_pipeline" %}class="active"{% endif %}>Home</li> #} -->
+                    {% endblock NAV_LINKS %}
+                    <!-- NAV LINKS END -->
+
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                    {% for category, message in messages %}
+                    <div class="alert alert-{{category}}">
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+                    {% endwith %}
+
+                    <!-- Resume -->
+                    <div class="row">
+
+                        <!-- Sidebar -->
+                        <div class="col-md-4">
+                            <div class="side-bar">
+
+                                <!-- Professional Details -->
+                                <h5 class="tittle">Professional Details</h5>
+                                <img src="{{ url_for('static', filename='images/me-02.JPG') }}" class="img-responsive"
+                                     alt="">
+
+                                <ul class="personal-info">
+                                    <li>
+                                        <p style="font-size: 17px; margin-bottom: 25px;"><span> Mohamed Eldesouki Mohamed</span>
+                                        </p>
+                                    </li>
+
+                                    <li>
+                                        <p><span> Research Associate </span></p>
+                                        <p style="line-height: 20px;"><span> <a href="https://qcri.org.qa/"
+                                                                                target="_blank">Qatar Computing Research Institute </a> </span>
+                                        </p>
+                                        <p><span> Doha, Qatar </span></p>
+                                        <br/>
+                                    </li>
+                                    <li>
+                                    </li>
+                                    <!--<li>-->
+                                    <!--<p> <span> Degree</span> MSc. in Computer Science </p>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                    <!--<p> <span> Current Employer</span>  </p>-->
+                                    <!--</li>-->
+                                    <li>
+                                        <p><span> Phone</span> (+974) 33-542583 </p>
+                                    </li>
+
+                                    <li>
+                                        <p><span>E-Mail</span> <a href="#"> mohamohamed AT hbku.org.qa</a></p>
+                                    </li>
+
+                                </ul>
+
+
+                                <!-- Attachments -->
+                                <h5 class="tittle">Attachments</h5>
+                                <div class="attach bor-btm padding-25">
+                                    <ul>
+                                        <li>
+                                            <p><img src="{{ url_for('static', filename='images/pdf-icon.jpg') }}"
+                                                    alt=""> Curriculum-Vitae.pdf
+                                                <a href="{{ url_for('static', filename='files/Curriculum-Vitae_20190325.pdf') }}"
+                                                   download="Mohamed-Eldesouki-CV.pdf">
+                                                    <i class="fa fa-cloud-download"></i>
+                                                </a>
+                                                <a href="{{ url_for('static', filename='files/Curriculum-Vitae_20190325.pdf') }}"
+                                                   target="_blank">
+                                                    <i class="fa fa-eye"></i>
+                                                </a>
+                                            </p>
+                                        </li>
+                                        <!--<li>-->
+                                        <!--<p><img src="images/word-icon.jpg" alt="" > COE.docx <a href="#."><i class="fa fa-cloud-download"></i></a> <a href="#."><i class="fa fa-eye"></i></a></p>-->
+                                        <!--</li>-->
+                                    </ul>
+                                </div>
+
+
+                                <!-- Social Profiles -->
+                                <h5 class="tittle">Social Profiles</h5>
+                                <div class="social-icon bor-btm padding-25">
+                                    <ul>
+                                        <li>
+                                            <a href="http://github.com/disooqi" target="_blank">
+                                                <i class="fa fa-github"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://scholar.google.com/citations?user=kilUJ5kAAAAJ&hl=en"
+                                               target="_blank">
+                                                <img style="height: 50%; padding: 0;margin: 0;"
+                                                     src="{{ url_for('static', filename='images/gs-icon-7.png') }}">
+                                            </a>
+                                        </li>
+                                        <!--<li> <a href="#."> <i class="fa fa-twitter"></i></a> </li>-->
+                                        <li>
+                                            <a href="https://www.linkedin.com/in/disooqi/" target="_blank">
+                                                <i class="fa fa-linkedin"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://join.skype.com/invite/gGxWGgHyq5Le" target="_blank">
+                                                <i class="fa fa-skype"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+                                <!-- Contact Me -->
+                                <h5 class="tittle">Contact Me</h5>
+                                <div class="contact padding-25">
+                                    <!-- Success Msg -->
+                                    <div id="contact_message" class="success-msg"><i class="fa fa-paper-plane-o"></i>Thank
+                                        You. Your Message has been Submitted
+                                    </div>
+
+                                    <!-- FORM -->
+                                    <form role="form" id="contact_form" class="contact-form" method="post"
+                                          onSubmit="return false">
+                                        <ul class="row">
+                                            <li class="col-sm-12">
+                                                <label>
+                                                    <input type="text" class="form-control" name="email" id="email"
+                                                           placeholder="Email" disabled>
+                                                </label>
+                                            </li>
+                                            <li class="col-sm-12">
+                                                <label>
+                                                    <input type="text" class="form-control" name="company" id="company"
+                                                           placeholder="Subject" disabled>
+                                                </label>
+                                            </li>
+                                            <li class="col-sm-12">
+                                                <label>
+                                                    <textarea class="form-control" name="message" id="message" rows="5"
+                                                              placeholder="Message" disabled></textarea>
+                                                </label>
+                                            </li>
+                                            <li class="col-sm-12">
+                                                <button class="" type="submit" value="submit" id="btn_submit"
+                                                        onClick="proceed();" disabled="disabled">Send Message
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        {% block MAIN_CONTENT %}
+                        {% endblock MAIN_CONTENT %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- End Content -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="rights">
+            <p>© Copyright {{ now.year }} Mohamed Eldesouki. All right reserved.</p>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+</div>
+<!-- End Page Wrapper -->
+
+
+<!-- JavaScripts -->
+<script src="{{ url_for('static', filename='js/vendors/jquery/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/vendors/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/vendors/owl.carousel.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/vendors/jquery.isotope.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+<!-- Begin Map Script-->
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+<script src="{{ url_for('static', filename='js/vendors/map.js') }}"></script>
+
+<script>
+
+// Since there are 2 iframes in the page, we must pass an ID for the current iframe
+setInterval(function() {
+    window.top.postMessage(document.body.scrollHeight + '-' + 'iframe1', "*");
+}, 500);
+
+</script>
+</body>
+</html>

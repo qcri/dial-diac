@@ -1,0 +1,8 @@
+embeddings {
+  tensor_name: "seq2seq/encoder/w_embs:0"
+  metadata_path: "src-vocab.txt"
+}
+embeddings {
+  tensor_name: "seq2seq/decoder/w_embs:0"
+  metadata_path: "tgt-vocab.txt"
+}
