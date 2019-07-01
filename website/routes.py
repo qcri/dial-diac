@@ -5,9 +5,6 @@ from .forms import DiacForm
 from . import diacritization
 
 
-
-
-
 @app.route('/demo/diacritization', methods=['GET', 'POST'])
 def onmt_diacritizer():
     form = DiacForm()

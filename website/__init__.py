@@ -11,7 +11,8 @@ from opennmt.config import load_model, load_config
 # INFO:tensorflow:Restoring parameters from toy-ende/model.ckpt-485000
 # tf.logging.set_verbosity(getattr(tf.logging, "ERROR"))
 
-app = Flask(__name__)
+# https://stackoverflow.com/questions/20646822/how-to-serve-static-files-in-flask
+app = Flask(__name__, static_url_path='/demo/static')
 # app.config['USE_X_SENDFILE'] = True
 app.config['SECRET_KEY'] = os.environ.get('DIALDIAC_SECRET_KEY')
 # app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DISOOQI_DB_URI')
