@@ -13,8 +13,8 @@ from opennmt.config import load_model, load_config
 
 app = Flask(__name__)
 # app.config['USE_X_SENDFILE'] = True
-app.config['SECRET_KEY'] = os.environ.get('DISOOQI_SECRET_KEY')
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DISOOQI_DB_URI')
+app.config['SECRET_KEY'] = os.environ.get('DIALDIAC_SECRET_KEY')
+# app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DISOOQI_DB_URI')
 # GA_TRACKING_ID = os.environ['GA_TRACKING_ID']
 
 db = SQLAlchemy(app)
