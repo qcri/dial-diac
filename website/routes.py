@@ -1,5 +1,5 @@
 from datetime import datetime
-from flask import render_template
+from flask import render_template, request
 from . import app
 from .forms import DiacForm
 from . import diacritization
@@ -15,6 +15,11 @@ def onmt_diacritizer():
 
         # flash('Your sentence has been diacritized!', 'success')
         #return redirect(url_for('home'))
+    elif request.method == 'GET':
+        raw_text = request.args.to_dict(flat=False).get('text', '')[0]
+        dialect = request.args.to_dict(flat=False).get('d', 'ca')[0]
+        print(raw_text)
+        diac_out = diacritization.run_diac(raw_text, dialect)
 
     return render_template('demos/onmt_diacritizer.html', title='New Sentence', form=form, output=diac_out)
 
