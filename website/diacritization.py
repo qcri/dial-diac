@@ -2,7 +2,7 @@ import codecs
 from . import ca_runner, msa_runner, tn_runner, ma_runner
 from random import randint
 import pyarabic.araby as araby
-import pyarabic.number as number
+from collections import defaultdict, Counter
 
 
 class LastNTokens(object):
@@ -73,10 +73,21 @@ def run_diac(gomla, dialect):
 
     with codecs.open(f'diacritizer/userdata/{dialect}/{fname}.rlt', mode='r', encoding='utf-8') as outfile:
         diacritized_tokens = list()
-        for line in outfile:
-            diacritized_tokens.append((line.strip().split(' _ ')[-1]).replace(' ', ''))
+        counters = defaultdict(Counter)
+        for i, line in enumerate(outfile):
+            dtokens = line.strip().split(' _ ')
+            # print(len(dtokens), dtokens)
+            for j, _ in enumerate(dtokens):
+                tk = dtokens[j - 1 - i % 7]
+
+                if tk not in ['نهايةجملة', 'بدايةجملة']:
+                    counters[j].update([tk])
+
+                if sum(counters[j].values()) >= 7:
+                    diacritized_tokens.append(counters[j].most_common(1)[0][0].replace(' ', ''))
+                    counters[j].clear()
         else:
-            return ' '.join(diacritized_tokens[:-6])
+            return ' '.join(diacritized_tokens)
 
 
 
