@@ -28,7 +28,7 @@ class LastNTokens(object):
 
 def run_diac(gomla, dialect):
     token_list_7 = LastNTokens(7)
-    fname = randint(0, 1000)
+    fname = randint(0, 100000)
     with codecs.open(f'diacritizer/userdata/{dialect}/{fname}.fmt', mode='w', encoding='utf-8') as infile:
         for token in gomla.strip().split():
             t = ' '.join(token)
