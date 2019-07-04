@@ -1,6 +1,8 @@
 import codecs
 from . import ca_runner, msa_runner, tn_runner, ma_runner
 from random import randint
+import pyarabic.araby as araby
+import pyarabic.number as number
 
 
 class LastNTokens(object):
@@ -30,7 +32,10 @@ def run_diac(gomla, dialect):
     token_list_7 = LastNTokens(7)
     fname = randint(0, 100000)
     with codecs.open(f'diacritizer/userdata/{dialect}/{fname}.fmt', mode='w', encoding='utf-8') as infile:
-        for token in gomla.strip().split():
+        gomla = araby.normalize_ligature(gomla)
+        gomla_list = araby.tokenize(gomla.replace('_', ''), conditions=araby.is_arabicrange, morphs=araby.strip_tashkeel)
+
+        for token in gomla_list:
             t = ' '.join(token)
             token_list_7.add_tokens_list(t, 0)
             infile.write(token_list_7.get_n_tokens() + '\n')
