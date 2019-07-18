@@ -53,7 +53,6 @@
     <div id="cont" class="resune-edit">
         <div class="resume" style="background: white !important;">
             <div class="container">
-
                 <!-- TOP HEAD -->
                 <div class="top-head">
                     <div class="row">
@@ -66,9 +65,6 @@
 
                 <!-- Resume -->
                 <div class="row">
-
-
-
                     <!-- MAIN CONTENT -->
                     <div class="col-md-12">
                         <div class="inside-sec">
@@ -91,20 +87,11 @@
                                         style="color: black; font-size: 20px;height: 230px;") }}
                                         {% endif %}
                                     </div>
-                                    <!--<textarea dir="rtl" class="form-control"-->
-                                              <!--style="color: black; font-size: 20px;height: 230px;">نلتزم في معهد قطر لبحوث الحوسبة بتعزيز مكانة اللغة العربية في عصر المعلومات عبر إجراء أبحاث في تقنيات اللغة العربية، فالحرص على ازدهار اللغة العربية في العالم الرقمي هو من أولويات أبحاثنا، وتتعرض مشاريع بحثنا الحالية لتحديات مرتبطة بانعدام المحتوى وأخرى لا تقل أهمية حول استخراج هذا المحتوى.-->
-
-<!--يسعى معهد قطر لبحوث الحوسبة ليصبح الرائد في تقنيات اللغة العربية في المنطقة والعالم وذلك في مجالات البحث واسترجاع المعلومات والتحليل ومعالجة اللغات المتعددة والترجمة الآلية المتقدمة كما يبذل جهداً لزيادة المحتوى العربي على الإنترنت وإغنائه.</textarea>-->
                                     <div class="skills margin-top-50">
-
-                                        <!-- SKILLS -->
                                         <h6>{{ form.dialect.label() }}</h6>
-
-                                         <!-- Sound Engineering -->
                                         <div class="row">
-
                                             <!-- Categories -->
-                                            <div class="col-sm-6">
+                                            <div class="col-sm-5">
                                                 <div class="form-group">
                                                     {% if form.dialect.errors %}
                                                     {{ form.content(class="form-control selectpicker is-invalid") }}
@@ -114,25 +101,16 @@
                                                         {% endfor %}
                                                     </div>
                                                     {% else %}
-                                                    {{ form.dialect(class="form-control selectpicker", onchange="selectRandText(this);") }}
+                                                        {{ form.dialect(class="form-control selectpicker", onchange="selectRandText(this);") }}
                                                     {% endif %}
                                                 </div>
-                                                <!--<span class="add-custm">or <a href="#."> Add A Custom Category</a></span> -->
                                             </div>
-
-
-                                            <!--  Skills -->
-                                            <div class="col-sm-6" style="text-align: right;">
+                                            <div class="col-sm-2" style="font-size: 19px; text-align: center; margin-top: 10px;">
+                                                {{ final_dialect }}
+                                            </div>
+                                            <div class="col-sm-5" style="text-align: right;">
                                                 {{ form.submit(class="btn ") }}
-                                                <!--<i href="#" class="btn" type="submit"><i class="fa fa-refresh"></i> Restore Diacritics</i>-->
                                             </div>
-                                            <!--<select class="selectpicker">-->
-                                            <!--<option>Skills</option>-->
-                                            <!--<option>HTML5 CSS3</option>-->
-                                            <!--<option>Photoshop</option>-->
-                                            <!--</select>-->
-                                            <!--<span class="add-custm">or <a href="#."> Add A Custom Skills</a></span> -->
-
                                         </div>
                                     </div>
 

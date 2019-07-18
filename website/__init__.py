@@ -7,6 +7,7 @@ from flask_login import LoginManager
 import tensorflow as tf
 from opennmt.runner import Runner
 from opennmt.config import load_model, load_config
+from joblib import load
 
 # INFO:tensorflow:Restoring parameters from toy-ende/model.ckpt-485000
 # tf.logging.set_verbosity(getattr(tf.logging, "ERROR"))
@@ -23,6 +24,9 @@ bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'
 login_manager.login_message_category = 'info'
+
+avi_vectorizer = load(os.path.join('website', 'static', 'arabic_variety_identification', 'dialect_identification.vec'))
+avi_model = load(os.path.join('website', 'static', 'arabic_variety_identification', 'dialect_identification.mdl'))
 
 
 ca_config = load_config(["diacritizer/opennmt-defaults.yml", "diacritizer_ca/toy-ende.yml"])
