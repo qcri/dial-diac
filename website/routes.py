@@ -29,8 +29,8 @@ def onmt_diacritizer():
     #     dialect = request.args.to_dict(flat=False).get('d', 'ca')[0]
     #     diac_out = diacritization.run_diac(raw_text, dialect)
 
-    dialect_label = {'':'Select A Variety', 'tun': 'Tunisian Dialect', 'ca': 'Classical Arabic',
-                     'msa': 'Modern Standard Arabic', 'mor':'Moroccan Dialect'}
+    dialect_label = {'': 'Auto Detect Mode', 'tun': 'Tunisian Dialect', 'ca': 'Classical Arabic',
+                     'msa': 'Modern Standard Arabic', 'mor': 'Moroccan Dialect'}
     return render_template('demos/onmt_diacritizer.html', title='New Sentence',
                            form=form, output=diac_out, final_dialect=dialect_label[dialect])
 

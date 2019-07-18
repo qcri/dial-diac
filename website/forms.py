@@ -5,7 +5,7 @@ from wtforms.validators import DataRequired, Length
 
 class DiacForm(FlaskForm):
     content = TextAreaField('Content', validators=[DataRequired(), Length(max=500)])
-    dialect = SelectField('Select version of Arabic', choices=[
+    dialect = SelectField('Select A variety of Arabic', choices=[
         ('auto_detect', 'Automatic Detect'),
         ('ca', 'Classical Arabic'),
         ('msa', 'Modern Standard Arabic'),
