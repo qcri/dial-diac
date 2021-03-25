@@ -27,7 +27,7 @@ pycparser==2.19
 pyonmttok==1.11.0
 python-dateutil==2.8.0
 python-editor==1.0.4
-PyYAML==5.1
+PyYAML==5.4
 rouge==0.3.1
 scikit-learn==0.21.2
 scipy==1.3.0
