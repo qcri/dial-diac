@@ -15,7 +15,7 @@ gast==0.2.2
 grpcio==1.19.0
 itsdangerous==1.1.0
 Jinja2==2.10
-joblib==0.13.2
+joblib==1.2.0
 Mako==1.0.7
 Markdown==3.1
 MarkupSafe==1.1.0
