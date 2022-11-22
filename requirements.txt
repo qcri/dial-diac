@@ -21,7 +21,7 @@ Markdown==3.1
 MarkupSafe==1.1.0
 numpy==1.14.5
 OpenNMT-tf==1.7.0
-Pillow==5.4.1
+Pillow==9.3.0
 protobuf==3.7.1
 pycparser==2.19
 pyonmttok==1.11.0
